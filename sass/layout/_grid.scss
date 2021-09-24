@@ -1,10 +1,12 @@
-.grid-test{
-    background-color: rgb(196,196,196);
-}
 
 .row{
     max-width: $row-width;
     margin:0 auto;
+    @include respond('tab-port'){
+        max-width: $row-width-small;
+        padding:0 3rem;
+    }
+    
     &::after{
         display:block;
         clear:both;
@@ -12,12 +14,22 @@
     }
     &:not(:last-child){
         margin-bottom: $gutter-vertical;
+        @include respond('tab-port'){
+            margin-bottom: $gutter-vertical-small;
+        }
     }
 
     [class^='col-']{
         float:left;
         &:not(:last-child){
             margin-right: $gutter-horizontal;
+            @include respond('tab-port'){
+                margin:0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+        @include respond('tab-port'){
+            width:100% !important; //important jer ispod njega ima definicija za width columna koje preuzimaju prioritet 
         }
     }
 

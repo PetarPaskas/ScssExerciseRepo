@@ -3,7 +3,9 @@
     background-color:$color-gray-dark-3;
     padding:10rem 0rem;
     font-size:1.4rem;
-
+    @include respond('tab-port'){
+        padding:8rem 0;
+    }
     &__logo-box{
         text-align: center;
     }
@@ -16,6 +18,10 @@
         border-top:1px solid $color-gray-dark;
         padding-top:2rem;
         display:inline-block;
+        @include respond('tab-port'){
+            width:100%;
+            text-align: center;
+        }
     }
     &__list{
         list-style-type: none;
@@ -54,5 +60,9 @@
             color:$color-gray-light-1;
             width:80%;
             float:right;
+            @include respond('tab-port'){
+                width:100%;
+                float:none;
+            }
     }
 }
