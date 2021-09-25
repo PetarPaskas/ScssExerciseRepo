@@ -41,7 +41,8 @@
     }
 }
 
-.section-book{
+.section-book{ 
+   
     padding:15rem 0;
     background-image:linear-gradient(to bottom right, $color-primary-light,$color-primary-dark);
     @include respond('tab-port'){
